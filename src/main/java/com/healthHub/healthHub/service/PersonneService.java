@@ -1,5 +1,7 @@
 package com.healthHub.healthHub.service;
-
+public class PersonneService {
+}
+/*
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,5 +22,5 @@ public class PersonneService {
 	return	personneRepository.save(personne)	;		
 	
 	}
-
 }
+*/
