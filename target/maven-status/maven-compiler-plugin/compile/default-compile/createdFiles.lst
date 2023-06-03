@@ -1,6 +1,7 @@
 com\healthHub\healthHub\controllers\DoctorController.class
 com\healthHub\healthHub\repository\DiagnosticRepository.class
 com\healthHub\healthHub\repository\HubRepository.class
+com\healthHub\healthHub\securities\WebSecurityConfig.class
 com\healthHub\healthHub\model\Doctor.class
 com\healthHub\healthHub\model\Hub.class
 com\healthHub\healthHub\repository\EmployeeRepository.class
