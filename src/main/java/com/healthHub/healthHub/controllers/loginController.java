@@ -50,7 +50,7 @@ public class loginController {
 	}
 
 	@PutMapping("/changepassword")
-	public ResponseEntity<Personne> changePassword(@RequestBody loginRequer login) {
+	public ResponseEntity<?> changePassword(@RequestBody loginRequer login) {
 		Optional<Personne> personne = personneRepository.findByemail(login.getEmail());
 		if (personne.isPresent()) {
 			BCryptPasswordEncoder bcrypt = new BCryptPasswordEncoder();
@@ -60,7 +60,9 @@ public class loginController {
 			Personne savedPersonne = personneRepository.save(existingPersonne);
 			return new ResponseEntity<>(savedPersonne, HttpStatus.OK);
 		} else {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			String errorMessage = "Email not found";
+			ErrorResponse errorResponse = new ErrorResponse(errorMessage);
+			return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
 		}
 	}
 }
